@@ -4,6 +4,7 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.Assertions;
 import org.testng.annotations.Test;
+
 import static io.restassured.RestAssured.given;
 
 public class PetStoreRestAussredTesting {
@@ -26,7 +27,7 @@ public class PetStoreRestAussredTesting {
                 .when()
                 .post("https://petstore.swagger.io/v2/user");
         response.prettyPrint();
-        Assertions.assertEquals(200,response.statusCode());
+        Assertions.assertEquals(200, response.statusCode());
     }
 
     @Test(priority = 1)
@@ -57,7 +58,7 @@ public class PetStoreRestAussredTesting {
                 .when()
                 .put("https://petstore.swagger.io/v2/user/Mohini");
         response.prettyPrint();
-        Assertions.assertEquals(200,response.statusCode());
+        Assertions.assertEquals(200, response.statusCode());
     }
 
     @Test(priority = 6)
@@ -90,7 +91,7 @@ public class PetStoreRestAussredTesting {
                 .when()
                 .post("https://petstore.swagger.io/v2/user/createWithList");
         response.prettyPrint();
-        Assertions.assertEquals(200,response.statusCode());
+        Assertions.assertEquals(200, response.statusCode());
     }
 
     @Test(priority = 4)
@@ -102,4 +103,55 @@ public class PetStoreRestAussredTesting {
         response.prettyPrint();
         response.then().assertThat().statusCode(200);
     }
+
+    @Test
+    public void placeAnOrderForAPet() {
+        Response response = given()
+                .accept("application/json")
+                .contentType("application/json")
+                .body("{\n" +
+                        " \"id\": 0,\n" +
+                        " \"petId\":1,\n" +
+                        " \"quantity\": 2,\n" +
+                        " \"shipDate\": \"2022-08-23T07:55:34.195Z\",\n" +
+                        " \"status\": \"placed\",\n" +
+                        " \"complete\": true\n" +
+                        "}")
+                .when()
+                .post("https://petstore.swagger.io/v2/store/order");
+        response.prettyPrint();
+        response.then().assertThat().statusCode(200);
+    }
+
+    @Test
+    public void deletePet() {
+        Response response = given()
+                .accept(ContentType.JSON)
+                .when()
+                .delete("https://petstore.swagger.io/v2/store/order/88230638");
+        response.prettyPrint();
+        response.then().assertThat().statusCode(200);
+    }
+
+    @Test
+    public void returnPetinventoriesbystatus() {
+        Response response = given()
+                .accept(ContentType.JSON)
+                .when()
+                .get("https://petstore.swagger.io/v2/store/inventory");
+        response.prettyPrint();
+        response.then().assertThat().statusCode(200);
+    }
+
+    @Test
+    public void findPurchesById() {
+        Response response = given()
+                .accept(ContentType.JSON)
+                .queryParam("orderId", "3")
+                .when()
+                .get("https://petstore.swagger.io/v2/store/order/3");
+        response.prettyPrint();
+        response.then().assertThat().statusCode(200);
+    }
 }
+

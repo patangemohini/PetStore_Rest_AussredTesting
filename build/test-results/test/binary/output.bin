@@ -1,40 +1,203 @@
-{
-    "code": 200,
-    "type": "unknown",
-    "message": "6874989318"
-}
+
 {
-    "id": 6874989211,
-    "username": "Mohini",
-    "firstName": "Mohini",
-    "lastName": "Patange",
-*    "email": "Mohinipatange39@gmail.com",
-    "password": "Mohi@1234",
-    "phone": "9350127300",
-    "userStatus": 0
+    "code": 200,
+    "type": "unknown",
+%    "message": "9222968140497201210"
 }
 {
     "code": 200,
     "type": "unknown",
-    "message": "ok"
+    "message": "88230638"
 }
 {
-    "code": 200,
-    "type": "unknown",
-6    "message": "logged in user session:1661235634610"
+    "code": 1,
+    "type": "error",
+    "message": "Pet not found"
 }
-{
-    "code": 200,
-    "type": "unknown",
-    "message": "6874989319"
-}
+[
+    {
+#        "id": 9223372036854232453,
+        "category": {
+            "id": 0,
+            "name": "monkey"
+        },
+        "name": "fruit",
+        "photoUrls": [
+            "string"
+        ],
+        "tags": [
+            {
+                "id": 0,
+!                "name": "string"
+            }
+        ],
+        "status": "sold"
+    },
+    {
+#        "id": 9223372036854234364,
+        "category": {
+            "id": 0,
+            "name": "monkey"
+        },
+        "name": "fruit",
+        "photoUrls": [
+            "string"
+        ],
+        "tags": [
+            {
+                "id": 0,
+!                "name": "string"
+            }
+        ],
+        "status": "sold"
+    },
+    {
+#        "id": 9223372036854234442,
+        "category": {
+            "id": 48345351,
+"            "name": "dolore quis"
+        },
+        "name": "doggie",
+        "photoUrls": [
+            "deseru",
+&            "nisi aute do incididunt"
+        ],
+        "tags": [
+            {
+                 "id": 72677302,
+8                "name": "in incididunt dolore occaecat"
+            },
+            {
+!                "id": -38449077,
+&                "name": "adipisicing"
+            }
+        ],
+        "status": "sold"
+    }
+]
 {
-    "id": 6874989212,
-    "username": "Rohini",
-    "firstName": "Rohini",
-    "lastName": "Patange",
-!    "email": "rose23@gmail.com",
-    "password": "rose@1234",
-    "phone": "9349592321",
-    "userStatus": 0
+    "code": 1,
+    "type": "error",
+!    "message": "Order not found"
 }
+{
+    "id": 88230654,
+    "petId": 1,
+    "quantity": 2,
+0    "shipDate": "2022-08-23T07:55:34.195+0000",
+    "status": "placed",
+    "complete": true
+}
+	{
+	    "totvs": 2,
+	    "sold": 3,
+	    "string": 300,
+	    "alive": 1,
+	    "unavailable": 2,
+	    "pending": 5,
+	    "available": 665,
+	    "mmm": 5,
+	    "peric": 4,
+	    "qqqq": 3,
+	    "avaliable": 2,
+	    "connector_up": 1,
+	    "asdfg": 1
+	}
+
+{
+
+    "id": 9223372036854234497,
+
+    "category": {
+
+        "id": 0,
+
+        "name": "bulldog"
+
+    },
+
+    "name": "doggie",
+
+    "photoUrls": [
+
+        "string"
+
+    ],
+
+    "tags": [
+
+
+        {
+
+            "id": 0,
+
+            "name": "string"
+
+
+        }
+
+    ],
+
+    "status": "pending"
+
+}
+{
+    "code": 1,
+    "type": "error",
+    "message": "Pet not found"
+}
+{
+    "id": 9222968140497201210,
+    "username": "Mohini",
+    "firstName": "Mohini",
+    "lastName": "Patange",
+*    "email": "Mohinipatange39@gmail.com",
+    "password": "Mohi@1234",
+    "phone": "9350127300",
+    "userStatus": 0
+}
+{
+    "code": 200,
+    "type": "unknown",
+    "message": "ok"
+}
+{
+    "code": 200,
+    "type": "unknown",
+6    "message": "logged in user session:1661259875816"
+}
+{
+    "id": 9223372036854234499,
+    "category": {
+        "id": 0,
+        "name": "bulldog"
+    },
+    "name": "doggie",
+    "photoUrls": [
+        "string"
+    ],
+    "tags": [
+
+        {
+            "id": 0,
+            "name": "string"
+
+        }
+    ],
+    "status": "available"
+}
+{
+    "code": 200,
+    "type": "unknown",
+%    "message": "9222968140497201214"
+}
+{
+    "id": 9222968140497201214,
+    "username": "Rohini",
+    "firstName": "Rohini",
+    "lastName": "Patange",
+!    "email": "rose23@gmail.com",
+    "password": "rose@1234",
+    "phone": "9349592321",
+    "userStatus": 0
+}
