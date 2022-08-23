@@ -153,5 +153,103 @@ public class PetStoreRestAussredTesting {
         response.prettyPrint();
         response.then().assertThat().statusCode(200);
     }
+
+    public void addNewPetToTheStore() {
+        Response response = given()
+                .accept(ContentType.JSON)
+                .contentType(ContentType.JSON)
+                .body("{\n" +
+                        "  \"id\": 0,\n" +
+                        "  \"category\": {\n" +
+                        "    \"id\": 0,\n" +
+                        "    \"name\": \"bulldog\"\n" +
+                        "  },\n" +
+                        "  \"name\": \"doggie\",\n" +
+                        "  \"photoUrls\": [\n" +
+                        "    \"string\"\n" +
+                        "  ],\n" +
+                        "  \"tags\": [\n" +
+                        "    {\n" +
+                        "      \"id\": 0,\n" +
+                        "      \"name\": \"string\"\n" +
+                        "    }\n" +
+                        "  ],\n" +
+                        "  \"status\": \"available\"\n" +
+                        "}")
+                .when()
+                .post("https://petstore.swagger.io/v2/pet");
+        response.prettyPrint();
+        Assertions.assertEquals(200, response.statusCode());
+    }
+
+    @Test
+    public void updatesAPetInTheStore() {
+        Response response = given()
+                .accept(ContentType.JSON)
+                .when()
+                .get("https://petstore.swagger.io/v2/pet/9223372036854231981");
+        response.prettyPrint();
+        response.then().assertThat().statusCode(200);
+    }
+
+    @Test
+    public void updateTheExistingPet(){
+        Response response = given()
+                .accept(ContentType.JSON)
+                .contentType(ContentType.JSON)
+                .body("{\n" +
+                        "  \"id\": 0,\n" +
+                        "  \"category\": {\n" +
+                        "    \"id\": 0,\n" +
+                        "    \"name\": \"bulldog\"\n" +
+                        "  },\n" +
+                        "  \"name\": \"doggie\",\n" +
+                        "  \"photoUrls\": [\n" +
+                        "    \"string\"\n" +
+                        "  ],\n" +
+                        "  \"tags\": [\n" +
+                        "    {\n" +
+                        "      \"id\": 0,\n" +
+                        "      \"name\": \"string\"\n" +
+                        "    }\n" +
+                        "  ],\n" +
+                        "  \"status\": \"pending\"\n" +
+                        "}")
+                .when()
+                .put("https://petstore.swagger.io/v2/pet");
+        response.prettyPrint();
+        Assertions.assertEquals(200, response.statusCode());
+    }
+
+    @Test
+    public void findPetByStatus() {
+        Response response = given()
+                .accept(ContentType.JSON)
+                .when()
+                .get("https://petstore.swagger.io/v2/pet/findByStatus?status=sold");
+        response.prettyPrint();
+        response.then().assertThat().statusCode(200);
+    }
+
+    @Test
+    public void findPetByID() {
+        Response response = given()
+                .accept(ContentType.JSON)
+                .when()
+                .get("https://petstore.swagger.io/v2/pet/9223372036854231981");
+        response.prettyPrint();
+        response.then().assertThat().statusCode(200);
+    }
+    @Test
+    public void DeleteAPet() {
+        Response response = given()
+                .accept(ContentType.JSON)
+                .when()
+                .delete("https://petstore.swagger.io/v2/pet/9223372036854231981");
+        response.prettyPrint();
+        response.then().assertThat().statusCode(200);
+    }
 }
+
+
 
