@@ -1,0 +1,40 @@
+{
+    "code": 200,
+    "type": "unknown",
+    "message": "6874989318"
+}
+{
+    "id": 6874989211,
+    "username": "Mohini",
+    "firstName": "Mohini",
+    "lastName": "Patange",
+*    "email": "Mohinipatange39@gmail.com",
+    "password": "Mohi@1234",
+    "phone": "9350127300",
+    "userStatus": 0
+}
+{
+    "code": 200,
+    "type": "unknown",
+    "message": "ok"
+}
+{
+    "code": 200,
+    "type": "unknown",
+6    "message": "logged in user session:1661235634610"
+}
+{
+    "code": 200,
+    "type": "unknown",
+    "message": "6874989319"
+}
+{
+    "id": 6874989212,
+    "username": "Rohini",
+    "firstName": "Rohini",
+    "lastName": "Patange",
+!    "email": "rose23@gmail.com",
+    "password": "rose@1234",
+    "phone": "9349592321",
+    "userStatus": 0
+}
